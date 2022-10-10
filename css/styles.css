@@ -1,0 +1,688 @@
+@font-face {
+	font-family: 'Filson Pro Regular';
+	src: url('./fonts/FilsonPro-Regular.eot');
+	src: local('Filson Pro Regular'), local('FilsonPro-Regular'), url('./fonts/FilsonPro-Regular.eot?#iefix') format('embedded-opentype'), url('./fonts/FilsonPro-Regular.woff2') format('woff2'), url('./fonts/FilsonPro-Regular.woff') format('woff'), url('./fonts/FilsonPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Filson Pro Bold';
+	src: url('./fonts/FilsonPro-Bold.eot');
+	src: local('Filson Pro Bold'), local('FilsonPro-Bold'), url('./fonts/FilsonPro-Bold.eot?#iefix') format('embedded-opentype'), url('./fonts/FilsonPro-Bold.woff2') format('woff2'), url('./fonts/FilsonPro-Bold.woff') format('woff'), url('./fonts/FilsonPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Filson Pro Black';
+	src: url('./fonts/FilsonPro-Black.eot');
+	src: local('Filson Pro Black'), local('FilsonPro-Black'), url('./fonts/FilsonPro-Black.eot?#iefix') format('embedded-opentype'), url('./fonts/FilsonPro-Black.woff2') format('woff2'), url('./fonts/FilsonPro-Black.woff') format('woff'), url('./fonts/FilsonPro-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+body {
+	margin: 0;
+	font-size: 16px;
+	line-height: normal;
+	font-family: 'Filson Pro Regular';
+  color: #37133d;
+  line-height: 20px;
+}
+
+*:focus-visible {
+  outline-color: #2c308a;;
+}
+
+a {
+  text-decoration: none;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	line-height: 1;
+}
+
+.h2 {
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.h3 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.list-default {
+  padding-left: 20px;
+  margin: 0;
+  line-height: 24px;
+}
+
+.text-lg {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.text-bold {
+  font-family: 'Filson Pro Bold';
+  font-weight: bold;
+}
+
+.text-color-primary {
+  color: #2c308a;
+}
+
+.bg-color-primary {
+  background-color: #2c308a;
+}
+
+.bg-light-grey {
+  background-color: #f6f7fa;
+}
+
+.bg-sky-blue {
+  background-color: #3070e6;
+}
+
+.bg-blue {
+  background-color: #2c308a;
+}
+
+.bg-grey-blue {
+  background-color: #0078ae;
+}
+
+.bg-purple {
+  background-color: #813d9c;
+}
+
+.border-white {
+  border: 1px solid #ffffff;
+}
+
+.btn-default {
+  background-color: transparent;
+  padding: 16px 24px;
+  font-family: 'Filson Pro Bold';
+  font-size: 20px;
+  -moz-border-radius: 32px;
+  -webkit-border-radius: 32px;
+  border-radius: 32px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: none;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-default:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.btn-white-rounded {
+  box-shadow: inset 0 0 0 2px #fff;
+  color: #ffffff;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #813d9c;
+}
+
+.btn-default > span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-default::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-white-rounded::before {
+  background-color: #ffffff;
+}
+
+.btn-primary::before {
+  background-color: #2c308a;
+}
+
+.btn-white-rounded:not(:disabled):hover {
+  color: #2c308a;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-primary:not(:disabled):hover {
+  color: #ffffff;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-default:not(:disabled):hover::before {
+  width: 100%;
+  border-radius: 32px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-container {
+  list-style-type: none;
+}
+
+.nav-container .nav-item > a {
+  color: #37133d;
+  font-size: 16px;
+  border: none;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.nav-container .nav-item > a:hover,
+.nav-container .nav-item > a.active {
+  box-shadow: inset 0 0 0 2px #2c308a;
+  transition: all 0.2s ease-in-out;
+  border-radius: 32px;
+  color: #2c308a;
+  border: none;
+}
+
+#vertical-carousel .carousel-inner,
+#vertical-carousel,
+#vertical-carousel .carousel-item,
+#vertical-carousel .carousel-container {
+	height: 85vh;
+	width: 100%;
+	background-position: center center;
+	background-size: cover;
+}
+
+.banner-text-container {
+	max-width: 992px;
+    height: 100%;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.banner-text-container h1 {
+	font-family: 'Filson Pro Black';
+	font-size: 56px;
+	font-weight: 900;
+  line-height: 64px;
+}
+
+.banner-sub-heading {
+	font-family: 'Filson Pro Regular';
+	font-size: 24px;
+	color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.page-section {
+  padding: 64px 0;
+}
+
+.section-heading {
+  font-family: 'Filson Pro Black';
+	font-size: 56px;
+	font-weight: 900;
+  color: #2c308a;
+  line-height: 72px;
+}
+
+.services-grid {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.services-grid .overlay-text {
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+  transition: 0.3s height;
+  color: #ffffff;
+  padding-left: 15px;
+  padding-right: 15px;
+  bottom: 24px;
+  transition: 0.3s all;
+  align-items: flex-end;
+  transition: 0.3s bottom;
+}
+
+.services-grid .overlay-text h3 {
+	color: #ffffff;
+	transition: 0.3s margin-bottom;
+	font-size: 24px;
+	text-transform: uppercase;
+  margin: 0;
+}
+
+.services-grid .text-wrapper {
+  z-index: 1;
+  color: #ffffff;
+}
+
+.services-grid::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 120, 174, 0.8);
+	position: absolute;
+	border-right: 100px solid transparent;
+	transform: skew(0deg, 18deg);
+	bottom: -50%;
+	transition: 0.3s all;
+	left: 0;
+}
+
+.services-grid:hover::before {
+  background-color: rgba(0, 120, 174, 1);
+  transition: 0.3s all;
+}
+
+.industry-connect-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.industry-connect-section div.section-img {
+  width: 33.33333333%;
+  background-color: #ffffff;
+  padding: 24px;
+  border-bottom: 2px solid #F1F1E6;
+  border-right: 2px solid #F1F1E6;
+  height: 164px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.industry-connect-section div.section-img img:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-out;
+}
+
+.testimonial-text {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.testimonial-author {
+  font-size: 24px;
+}
+
+.testimonial-buttons {
+  width: 80px;
+  height: 32px;
+}
+
+.testimonial-buttons .carousel-control-next,
+.testimonial-buttons .carousel-control-prev {
+  opacity: 1;
+  width: 32px;
+  height: 32px;
+  box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 50% 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: none;
+}
+
+.testimonial-buttons .carousel-control-next::before,
+.testimonial-buttons .carousel-control-prev::before {
+  position: absolute;
+  z-index: 0;
+  content: '';
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  transition: all 0.3s ease-out;
+}
+
+.testimonial-buttons .carousel-control-next::before {
+  right: 0;
+  left: auto;
+}
+
+.testimonial-buttons .carousel-control-next:hover::before,
+.testimonial-buttons .carousel-control-prev:hover::before {
+  width: 100%;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+
+.testimonial-buttons .carousel-control-next > *,
+.testimonial-buttons .carousel-control-prev > * {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-buttons .carousel-control-next .hover,
+.testimonial-buttons .carousel-control-prev  .hover {
+  display: none;
+}
+
+.testimonial-buttons .carousel-control-next:hover .normal,
+.testimonial-buttons .carousel-control-prev:hover  .normal {
+  display: none;
+}
+
+.testimonial-buttons .carousel-control-next:hover .hover,
+.testimonial-buttons .carousel-control-prev:hover  .hover {
+  display: block;
+}
+
+.testimonial-buttons .carousel-control-next:hover .hover,
+.testimonial-buttons .carousel-control-prev:hover  .hover {
+  display: block;
+}
+
+.footer-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links > li > a {
+  color: #37133d;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-links > li > a:hover {
+  color: #2c308a;
+}
+
+.copy-right-container {
+  border-top: 1px solid #ebeef3;
+}
+
+.about-us-banner {
+  background-image: url("../images/about-us/about-us-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.appearls-procedure {
+  background-image: url("../images/admissions/appearls-procedure.jpg");
+}
+
+.admission-procedure {
+  background-image: url("../images/admissions/admission-procedure.jpg");
+}
+
+.course-container {
+  border: 1px solid #37133d;
+  color: #37133d;
+  text-decoration: none;
+  overflow: hidden;
+  background-color: transparent;
+  transition: all 0.3s ease-out;
+}
+
+.course-container:hover {
+  color: #ffffff;
+  background-color: #2c308a;
+  transition: all 0.3s ease-out;
+}
+
+/* .course-container:hover h3 {
+  color: #ffffff;
+  transition: color 0.15s ease-out;
+} */
+
+.course-container img {
+  width: 100%;
+  transform: scale(1);
+  transition: all 0.15s ease-out;
+}
+
+.course-img {
+  overflow: hidden;
+  padding: 0;
+  transition: all 0.3s ease-out;
+}
+
+.course-container:hover img {
+  transform: scale(.95);
+  transition: all 0.15s ease-out;
+}
+
+.course-card {
+	border-radius: 8px;
+	background-color: #ffffff;
+	transform: translateZ(0) scale(1);
+	box-shadow: 0 4px 32px -11px rgba(17, 24, 39, 0.1);
+	display: flex;
+	align-items: center;
+	transition: transform 0.15s ease-out, box-shadow 0.15s linear;
+	margin-bottom: 36px;
+  margin-right: 36px;
+}
+
+.course-card:hover {
+	transform: translateZ(0) scale(1.05);
+	box-shadow: 0 4px 32px -11px rgba(17, 24, 39, 0.3);
+}
+
+.course-card-img {
+	width: 100px;
+	height: 100px;
+}
+
+.course-card-img img {
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	height: 100px;
+	width: 100px;
+}
+
+.course-card-heading {
+	padding: 0 12px 0 24px;
+  flex: 1;
+  text-transform: none;
+  margin: 0;
+  color: initial;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.course-top-section {
+  margin-top: -200px;
+  position: relative;
+}
+
+.course-page-heading {
+  padding: 24px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: inline-block;
+}
+
+.flex-full-height {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-full-height .flex-box {
+  flex-basis: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.study-option-box {
+  padding-right: 0px;
+}
+
+.course-overview-box {
+  padding-left: 4px;
+}
+
+.tabs-primary .nav-item > .nav-link {
+	width: 100%;
+	color: #ffffff;
+	text-transform: none;
+	height: 48px;
+	border-radius: 0;
+	font-size: 24px;
+  background-color: #833a9b;
+  opacity: 0.7;
+}
+
+.tabs-primary .nav-link.active, .tabs-primary .show >.nav-link {
+	background-color: #833a9b;
+  opacity: 1;
+}
+
+/* contact us styles */
+.form-black {
+	background-color: #ffffff;
+}
+
+.form-black input,
+.form-black textarea,
+.form-black label,
+.form-black select {
+	font-size: 14px;
+}
+
+select .select-optiongroup {
+	font-weight: bold;
+}
+
+.form-black select option {
+	color: #000000;
+	font-weight: 300;
+}
+
+#contactUsForm .form-group {
+	position: relative;
+}
+
+#contactUsForm .form-group label.error {
+	color: #b91f1f;
+	font-size: 13px;
+}
+
+#contactUsForm .form-group .input-label {
+	position: absolute;
+	top: 8px;
+	transition: 0.3s all;
+	left: 0;
+}
+
+.input-label sub {
+	top: -3px;
+}
+
+#contactUsForm .form-group .form-control {
+	border: 1px solid transparent;
+	border-bottom: 1px solid #2c308a;
+	outline: none;
+	-webkit-appearance: none;
+	appearance: none;
+	-moz-appearance: none;
+	border-radius: 0;
+	padding-left: 0;
+	background: transparent;
+	font-size: 16px;
+	z-index: 1;
+	position: relative;
+}
+
+.select-bg-icon {
+	color: #ffffff;
+  position: absolute;
+  right: 0;
+  top: 12px;
+}
+
+#contactUsForm .form-group textarea.form-control {
+	border: 1px solid #2c308a;
+	padding-left: 10px;
+}
+
+#contactUsForm .form-group .form-control:focus {
+	outline: none;
+	box-shadow: none;
+	background-color: transparent;
+	border-bottom-width: 3px;
+}
+
+#contactUsForm .form-group .text-area-label {
+	left: 10px;
+}
+
+
+
+#contactUsForm .form-group .form-control:focus ~ .input-label,
+#contactUsForm .form-group .form-control.active ~ .input-label {
+	top: -18px;
+	transition: 0.3s all;
+	font-size: 12px;
+}
+
+#contactUsForm .form-group .form-control:focus ~ .text-area-label,
+#contactUsForm .form-group .form-control.active ~ .text-area-label {
+	left: 0;
+}
+
+#contactUsForm .form-group textarea {
+	min-height: 160px !important;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.ckeckbox-input.confirmation {
+	position: absolute;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+.ckeckbox-input.confirmation ~ label.error {
+	padding-left: 30px;
+}
+
+@media screen and (max-width: 575px) {
+	.study-option-box {
+		padding-right: 12px;
+	}
+
+	.course-overview-box {
+		padding-left: 8px;
+	}
+}
