@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Paris Business School | Apply Now</title>
+    <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/bootstrap-datepicker.min.css"/>
+    <link href="./css/form.css" rel="stylesheet">
+
+    <script src="./js/jquery-3.6.1.min.js" type="text/javascript"></script>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-center">
+        <a href="./" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <img src="./images/logo.svg" width="200" />
+        </a>
+  
+        <ul class="nav-container d-flex align-items-center m-0 p-0">
+          <li class="nav-item"><a href="./about-us.html" class="nav-link" aria-current="page">About Us</a></li>
+          <li class="nav-item"><a href="./programs.html" class="nav-link">Programs</a></li>
+          <li class="nav-item"><a href="./admissions.html" class="nav-link">Admissions</a></li>
+          <li class="nav-item"><a href="./partners.html" class="nav-link">Partners</a></li>
+          <li class="nav-item"><a href="./contact-us.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </header>
+    </div>
+
+    <div class="carousel-container justify-content-center">
+      <div id="vertical-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false"
+        data-bs-wrap="false">
+        <div class="carousel-inner">
+          <div data-index="1" class="carousel-item active" style="background-image:url('./images/home-banner-1.jpg');">
+            <div class="d-flex align-items-center justify-content-center flex-column banner-text-container">
+              <span class="banner-sub-heading mb-4">Welcome to Paris Business School</span>
+              <h1 class="text-center text-light mb-4">
+                Education is the best key success in life
+              </h1>
+              <a href="./our-courses.html" class="btn-default btn-white-rounded">
+                <span>Our Courses</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body-content">
+        <div class="page-section pb-4">
+            <div class="container">
+                <p class="text-font-semibold">
+                    You must submit the following documents as part of your application. You are responsible for making sure that all required documents, Documents are submitted in time for your chosen deadline and meet the requirements. Check the documents you submit carefully.</p>
+                <p class="text-font-semibold">Please have the following documents ready:</p>
+                <p>Passport Copies<br />
+                    Official Transcripts from all Degree-Granting Institutions Attended<br />
+                    Two references<br />
+                    SOP/Personal Statement<br />
+                    CV/Resume<br />
+                    Work Experience</p>
+            </div>
+        
+            <div class="container" id="errorMsgContainer">
+                <div style="display: none;" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <p id='errorMsg' class="m-0"></p>
+                </div>
+        
+                <div style="display: none;" class="alert alert-success alert-dismissible fade show" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <p id='successMsg' class="m-0"></p>
+                </div>
+              </div>
+            </div>
+        
+            <div class="container online-form">
+                <form class="form-default form-inline-labels" method="POST" enctype="multipart/form-data" id="onlineForm">
+                    <div class="row">
+                        <div class="col-12 mb-2">
+                            <h4>Field marked with an asterisk (*) are mandatory.</h4>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-12 mb-2">
+                            <h5>Personal Details <span>*</span></h5>
+                        </div>
+                        <div class="col-sm-6 mg-btm-20">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="title" />
+                                <label class="form-label" data-label="Title">Title <sup>*</sup></label>
+                            </div>
+                        </div>
+        
+                        <div class="col-sm-6 mg-btm-20">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="firstName" required />
+                                <label class="form-label" data-label="First name">First name <sup>*</sup></label>
+                            </div>
+                        </div>
+        
+                        <div class="col-sm-6 mg-btm-20">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="surName" />
+                                <label class="form-label" data-label="Surname">Surname <sup>*</sup></label>
+                            </div>
+                        </div>
+        
+                        <div class="col-sm-6 mg-btm-20">
+                            <div class="form-group">
+                                <input type="text" maxlength="20" class="form-control" id="dateOfBirth" name="dob" />
+                                <label class="form-label" data-label="Date of birth">D.O.B (DD/MM/YYYY) <sup>*</sup></label>
+                            </div>
+                        </div>
+        
+                        <div class="col-sm-6 mg-btm-20">
+                            <div class="form-group">
+                                <input type="number" maxlength="15" class="form-control" name="mobile" required />
+                                <label class="form-label" data-label="Mobile">Mobile Number <sup>*</sup></label>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mg-btm-20">
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" />
+                                <label class="form-label" data-label="Email">Email <sup>*</sup></label>
+                            </div>
+                        </div>
+        
+
+                        <div class="col-sm-6 mg-btm-20">
+                            <div class="form-group">
+                                <div class="input-icon-box">
+                                      <select class="form-control" id="nationality" name="nationality">
+                                      <option value></option>
+                                    </select>
+                                    <label class="form-label" data-label="Nationality">Nationality <sup>*</sup></label>
+                                      <span class="input-icon"><img src="./images/caret-down.png" width="20"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row mb-4">
+                        <div class="col-12 mb-2">
+                            <h5>Contact Details <span>*</span></h5>
+                        </div>
+                        <div class="col-sm-6 mg-btm-20">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="address" />
+                                <label class="form-label" data-label="Address">Address <sup>*</sup></label>
+                            </div>
+                        </div>
+        
+                        <div class="col-sm-6 mg-btm-20">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="addAddress" />
+                                <label class="form-label" data-label="Additional Address">Additional Address</label>
+                            </div>
+                        </div>
+        
+                        <div class="col-sm-6 mg-btm-20">
+                            <div class="form-group">
+                                <input type="text" maxlength="10" class="form-control" name="postCode" />
+                                <label class="form-label" data-label="Postcode/Zipcode">Postcode/Zipcode <sup>*</sup></label>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mg-btm-20">
+                            <div class="form-group">
+                                <div class="input-icon-box">
+                                    <select class="form-control" id="departments" name="departments">
+                                        <option value></option>
+                                    </select>
+                                    <label class="form-label" data-label="Department">Department</label>
+                                    <span class="input-icon"><img src="./images/caret-down.png" width="20"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mg-btm-20">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="city" />
+                                <label class="form-label" data-label="City">City <sup>*</sup></label>
+                            </div>
+                        </div>
+        
+                        <div class="col-sm-6 mg-btm-20">
+                            <div class="form-group">
+                                <div class="input-icon-box">
+                                    <select class="form-control" id="country" name="country">
+                                        <option value></option>
+                                    </select>
+                                    <label class="form-label" data-label="Country">Country <sup>*</sup></label>
+                                    <span class="input-icon"><img src="./images/caret-down.png" width="20"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-12 mb-2">
+                            <h5>Which course are you applying for? <span>*</span></h5>
+                        </div>
+                        <div class="col-sm-12 mg-btm-20">
+                            <div class="form-group">
+                                <div class="input-icon-box">
+                                      <select class="form-control" name="courses">
+                                        <option value></option>
+                                        <optgroup class="select-optiongroup txt-color-primary" label="Undergraduate">
+                                          <option value="BSc (Hons) International Hospitality and Tourism Management">BSc (Hons) International Hospitality and Tourism Management</option>
+                                          <option value="BSc (Hons) Hospitality Management with Entrepreneurship">BSc (Hons) Hospitality Management with Entrepreneurship</option>
+                                          <option value="International BBA">International BBA</option>
+                                          <option value="BSc (Hons) Accounting and Finance">BSc (Hons) Accounting and Finance</option>
+                                          <option value="BSc (Hons) Marketing Data Analytics">BSc (Hons) Marketing Data Analytics</option>
+                                        </optgroup>
+                                        <optgroup class="select-optiongroup txt-color-primary" label="Postgraduate">
+                                          <option value="MSc International Hospitality Management with Digital Innovation">MSc International Hospitality Management with Digital Innovation</option>
+                                          <option value="MSc International Hospitality & Tourism Management">MSc International Hospitality & Tourism Management</option>
+                                          <option value="Global MBA">Global MBA</option>
+                                          <option value="Ms Management and Corporate Strategy">MBA Master of Business Administration</option>
+                                          <option value="MSc International Business with Data Analytics">MSc International Business with Data Analytics</option>
+                                          <option value="MSc International Business Management">MSc International Business Management</option>
+                                          <option value="MSc Accounting and Financial Management">MSc Accounting and Financial Management</option>
+                                        </optgroup>
+                                        <optgroup class="select-optiongroup txt-color-primary" label="Language Courses">
+                                          <option value="Business English">Business English</option>
+                                          <option value="General English">General English</option>
+                                          <option value="IELTS Preparation">IELTS Preparation</option>
+                                          <option value="French introduction">French Introduction</option>
+                                          <option value="French Beginner Level A1">French Beginner Level A1</option>
+                                          <option value="French Beginner Level A2">French Beginner Level A2</option>
+                                          <option value="French for Beginner">French for Beginner</option>
+                                          <option value="French for Professional">French for Professional</option>
+                                        </optgroup>
+                                    </select>
+                                    <label class="form-label" data-label="Course">Select Course <sup>*</sup></label>
+                                      <span class="input-icon"><img src="./images/caret-down.png" width="20"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-12 mb-2">
+                            <h5>Foreign language course choice <span>*</span></h5>
+                        </div>
+                        <div class="col-sm-12 mg-btm-20">
+                            <div class="form-group">
+                                <div class="input-icon-box">
+                                      <select class="form-control" name="language">
+                                        <option value></option>
+                                        <option value="English">English</option>
+                                        <option value="French">French</option>
+                                    </select>
+                                    <label class="form-label" data-label="English/French">English/French <sup>*</sup></label>
+                                      <span class="input-icon"><img src="./images/caret-down.png" width="20"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row mb-4">
+                        <div class="col-12 mb-2">
+                            <h5>Academic History <span>*</span> <span class="form-info">(Please upload all docs in one zip file)</span> <span class="txt-display-inline">Qualification details 1</span></h5>
+                        </div>
+        
+                        <div class="col-sm-12 mg-btm-20">
+                            <div class="form-group">
+                                <label class="input-file-box" tabindex="0">
+                                    <input tabindex="-1" type="file" class="form-control input-box txt-visibility-hidden" name="qualification-details-one" />
+                                    <span class="upload-button">Upload doc</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row mb-4">
+                        <div class="col-12 mb-2">
+                            <h5>Academic History <span>*</span> <span class="form-info">(Please upload all docs in one zip file)</span> <span class="txt-display-inline">Qualification details 2</span></h5>
+                        </div>
+        
+                        <div class="col-sm-12 mg-btm-20">
+                            <div class="form-group">
+                                <label class="input-file-box" tabindex="0">
+                                    <input type="file" class="form-control input-box txt-visibility-hidden" name="qualification-details-two" tabindex="-1" />
+                                    <span class="upload-button">Upload doc</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-4">
+                        <div class="col-12 mb-2">
+                            <h5>Additional Qualifications <span class="form-info">(Please upload all docs in one zip file)</span></h5>
+                        </div>
+        
+                        <div class="col-sm-12 mg-btm-20">
+                            <div class="form-group">
+                                <label class="input-file-box" tabindex="0">
+                                    <input type="file" class="form-control input-box txt-visibility-hidden" name="additional-qualification" tabindex="-1" />
+                                    <span class="upload-button">Upload doc</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row mb-4">
+                        <div class="col-12 mb-2">
+                            <h5>Supporting Documents</h5>
+                        </div>
+                        <div class="col-md-6 mg-btm-20">
+                            <div class="form-group">
+                                <label class="input-file-box" tabindex="0">
+                                    <input type="file" class="form-control input-box txt-visibility-hidden" name="passport" tabindex="-1" />
+                                    <span class="file-label-text">Passport/ID <sup>*</sup></span>
+                                    <span class="upload-button">Upload doc</span>
+                                </label>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-6 mg-btm-20">
+                            <div class="form-group">
+                                <label class="input-file-box" tabindex="0">
+                                    <input type="file" tabindex="-1" class="form-control input-box txt-visibility-hidden" name="personal-statement" tabindex="-1" />
+                                    <span class="file-label-text">SOP/Personal Statement <sup>*</sup></span>
+                                    <span class="upload-button">Upload doc</span>
+                                </label>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-6 mg-btm-20">
+                            <div class="form-group">
+                                <label class="input-file-box" tabindex="0">
+                                    <input type="file" class="form-control input-box txt-visibility-hidden" name="resume" tabindex="-1" />
+                                    <span class="file-label-text">CV/Resume <sup>*</sup></span>
+                                    <span class="upload-button">Upload doc</span>
+                                </label>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-6 mg-btm-20">
+                            <div class="form-group">
+                                <label class="input-file-box" tabindex="0">
+                                    <input type="file" class="form-control input-box txt-visibility-hidden" name="work-experience" tabindex="-1" />
+                                    <span class="file-label-text">Work Experience</span>
+                                    <span class="upload-button">Upload doc</span>
+                                </label>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-6 mg-btm-20">
+                            <div class="form-group">
+                                <label class="input-file-box" tabindex="0">
+                                    <input type="file" class="form-control input-box txt-visibility-hidden" name="references-one" tabindex="-1" />
+                                    <span class="file-label-text">Reference 1</span>
+                                    <span class="upload-button">Upload doc</span>
+                                </label>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-6 mg-btm-20">
+                            <div class="form-group">
+                                <label class="input-file-box" tabindex="0">
+                                    <input type="file" class="form-control input-box txt-visibility-hidden" name="references-two" tabindex="-1" />
+                                    <span class="file-label-text">Reference 2</span>
+                                    <span class="upload-button">Upload doc</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-12 mb-2">
+                            <h5>English test score (TOEFL, TOEIC, IELTS or Cambridge)</h5>
+                        </div>
+        
+                        <div class="col-sm-12 mg-btm-20">
+                            <div class="form-group">
+                                <label class="input-file-box" tabindex="0">
+                                    <input type="file" class="form-control input-box txt-visibility-hidden" name="test-score-document" tabindex="-1" />
+                                    <span class="upload-button">Upload doc</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row mb-4">
+                        <div class="col-12 mb-4">
+                            <div class="form-group form-check">
+                                <input id="agreement" type="checkbox" class="form-check-input" name="agreement" required>
+                                <label for="agreement" class="form-check-label"> I hereby declare that all the information given by me in this application is true and correct to the best of my knowledge and belief. I also note that if any of the above statements are found to be incorrect or false or any information or particulars have been suppressed or omitted there from, I am liable to be disqualified and my admission may be cancelled. I have read and understood the contents of the Admission Announcement for the various Programmes. I hereby permit the institute to use, display or transfer any of the details furnished by me in this form for complying with the admission formalities.</label>
+                            </div>
+                        </div>
+        
+                        <div class="col-12 mb-4">
+                            <button id="submitFormBtn" class="btn-default btn-primary"><span>Apply Now</span></button>
+        
+                            <button id="resetFormBtn" type="reset" class="btn-black txt-visibility-hidden">SUBMIT</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-section" class="page-section border-top-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-lg-4">
+            <div style="max-width: 280px;">
+              <img src="./images/logo.svg" width="200" />
+              <p>
+                Loo faff about cockup Harry
+                baking cakes hunky dory mush
+                happy days on your bike mate.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-2">
+            <h3 class="h3 mb-3">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="./about-us.html">About Us</a></li>
+              <li><a href="./programs.html">Programs</a></li>
+              <li><a href="./admissions.html">Admissions</a></li>
+              <li><a href="./partners.html">Partners</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <h3 class="h3 mb-3">Programmes</h3>
+            <ul class="footer-links">
+              <li><a href="./undergraduate.html">Undergraduate</a></li>
+              <li><a href="./postgraduate.html">Postgraduate</a></li>
+              <li><a href="./language-courses.html">Language Courses</a></li>
+              <li><a href="./study-online.html">Study Online</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <h3 class="h3 mb-3">Contact Us</h3>
+            <p>
+              7, Rue Meyerbeer<br/>
+              75009 Paris<br/>
+              France<br/>
+              Tel: +33 (0)1 88 49 41 10<br/>
+              Email: info@pbs-edu.fr
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-section pt-0">
+      <div class="container">
+        <div class="pt-3 copy-right-container">
+          <span>&copy; Copyright 2022 Design by mirageadlab. All rights reserved</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/optionsList.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap-datepicker.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".form-default select").each(function() {
+    			$(this).addClass("initial-select");
+    		});
+
+    		$(".form-control").not("[type='file']").on('blur', function () {
+    			const value = $(this).val().trim();
+    			if (value) {
+    				$(this).addClass("active");
+    				$(this).val(value);
+    			} else {
+    				$(this).removeClass("active");
+    				$(this).val("");
+    			}
+            });
+
+            $(".form-default select").change(function() {
+    			if (!$(this).val() && $(this).attr("class").indexOf("initial-select") === -1) {
+    				$(this).addClass("initial-select");
+    			} else if ($(this).val() && $(this).attr("class").indexOf("initial-select") !== -1) {
+    				$(this).removeClass("initial-select");
+    			}
+    		});
+
+    		$(".form-default [type='file']").change(function() {
+    			const findLableText = $(this).parent(".input-file-box").find('.file-label-text');
+    			if ($(this).val()) {
+    				$(this).removeClass("txt-visibility-hidden");
+    				if (findLableText.length > 0) $(findLableText[0]).addClass("txt-visibility-hidden");
+    			} else {
+    				$(this).addClass("txt-visibility-hidden");
+    				if (findLableText.length > 0) $(findLableText[0]).removeClass("txt-visibility-hidden");
+    			}
+            });
+            
+            renderCountriesList();
+            renderCountriesList(true);
+
+            function renderCountriesList(isOther) {
+                const countryBox = $("#country");
+                const nationalityBox = $("#nationality");
+                const departmentBox = $("#departments");
+                let innerHTMLWithExt = '';
+                let innerHTML = '';
+                if (isOther) {
+                    departmentsList.forEach((department) => {
+                        innerHTML += `<option value="${department}">${department}</option>`;
+                    });
+                    departmentBox.append(innerHTML);
+                    return;
+                }
+                countriesList.forEach((countryValue) => {
+                    innerHTML += `<option value="${countryValue.name}">${countryValue.name}</option>`;
+                });
+                countryBox.append(innerHTML);
+                nationalityBox.append(innerHTML);
+            }
+
+            var validateForm = $("#onlineForm").validate();
+
+            $("#onlineForm").on('submit', function (event) {
+        			if ($(this).valid()) {
+        				event.preventDefault();
+        				var labels = {};
+                        var formData = $(this).serializeArray();
+                        console.log(formData, "formData");
+        				// formData[0].value = courseList[formData[0].value];
+        				var name = $("[name='firstName']").val();
+        				formData.forEach(function(inputItem) {
+        					var label = $('[name='+inputItem.name+']').parent().find(".form-label").attr("data-label");
+        				labels[inputItem.name] = label;
+        				});
+        				var finalFormData = new FormData(this);
+                var currentdate = new Date(); 
+                var folderDatetime = currentdate.getFullYear() 
+                + "_" + (currentdate.getMonth()+1)
+                + "_" + currentdate.getDate()
+                + "_" + currentdate.getHours() + ""  
+                                + currentdate.getMinutes() + "" 
+                                + currentdate.getSeconds();
+
+        				finalFormData.append("labels", JSON.stringify(labels));
+                // finalFormData.append("courseName", formData[0].value);
+                finalFormData.append("folderDatetime", folderDatetime);
+        				$.ajax({
+        					method:'POST',
+        					url:'upload.php',
+                  			processData:false,
+        					data: finalFormData,
+        				    contentType: false,
+        				    cache: false,
+        					beforeSend:function(){
+        						console.log("Sending.....");
+                    console.log(finalFormData);
+        						// $("#submitFormBtn").prop("disabled", true);
+        					},
+        					success:function(data){
+        						var response = $.parseJSON(data);
+        						if (response.type === "success") {
+        							$(".alert-success #successMsg").append("Online form submitted successfully");
+        							$(".alert-success").fadeIn();
+        							$("#resetFormBtn").trigger("click");
+        							$("#submitFormBtn").prop("disabled", false);
+        							$([document.documentElement, document.body]).animate({
+        							        scrollTop: $("#errorMsgContainer").offset().top
+        							    }, 500);
+        							setTimeout(function() {
+        								$(".alert-success #successMsg").html("");
+        								$(".alert-success").fadeOut();
+        							}, 5000);
+        						} else if (response.type === "error" && response.message) {
+        							if (response.message.length > 0) {
+        								var innerHTML = "<ul>";
+        								var isContent = false;
+        								for (var i = 0; i < response.message.length; i++) {
+        									innerHTML += "<li>"+response.message[i]+"</li>";
+        									isContent = true;
+        								}
+        								if (!isContent) {
+        									innerHTML += "<li>form not submitted successfully. Kindly upload only JPEG, JPG, PNG, ZIP, RAR, DOC, DOCX, and PDF format files</li>";
+        								}
+        								innerHTML += "</ul>";
+        								$(".alert-danger #errorMsg").append(innerHTML);
+        								$(".alert-danger").fadeIn();
+        								$([document.documentElement, document.body]).animate({
+        							        scrollTop: $("#errorMsgContainer").offset().top
+        							    }, 500);
+        								setTimeout(function() {
+        									$(".alert-danger #errorMsg").html("");
+        									$(".alert-danger").fadeOut();
+        								}, 7000);
+        							}
+        							$("#submitFormBtn").prop("disabled", false);
+        						} else if (response.type === "error" && !response.message) {
+        							var innerHTML = "<ul>";
+        							innerHTML += "<li>form not submitted successfully. Kindly upload only JPEG, JPG, PNG, ZIP, RAR, DOC, DOCX, and PDF format files</li>";
+        							innerHTML += "</ul>";
+        							$(".alert-danger #errorMsg").append(innerHTML);
+        							$(".alert-danger").fadeIn();
+        							$([document.documentElement, document.body]).animate({
+        						        scrollTop: $("#errorMsgContainer").offset().top
+        						    }, 500);
+        						    $("#submitFormBtn").prop("disabled", false);
+        							setTimeout(function() {
+        								$(".alert-danger #errorMsg").html("");
+        								$(".alert-danger").fadeOut();
+        							}, 7000);
+        						}
+        					},
+        					error:function(errordata) {
+        						console.log(errordata);
+        						alert("Something went wrong");
+        						$("#submitFormBtn").prop("disabled", false);
+        					}
+        				});
+        			}
+        		});          
+          });
+    </script>
+  </body>
+</html>
