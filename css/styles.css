@@ -59,6 +59,7 @@ p {
   padding-left: 20px;
   margin: 0;
   line-height: 24px;
+  font-size: 18px;
 }
 
 .text-lg {
@@ -97,6 +98,10 @@ p {
 
 .bg-purple {
   background-color: #520e83;
+}
+
+.bg-teal-grey {
+  background-color: #7e6257;
 }
 
 .border-white {
@@ -791,6 +796,7 @@ input[type=number] {
     background: #ffffff;
     width: 100%;
     top: 72px;
+    left: 0;
     display: none;
   }
   .nav-item:first-child {
