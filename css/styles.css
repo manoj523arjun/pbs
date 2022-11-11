@@ -270,6 +270,13 @@ p {
   position: relative;
   display: block;
   overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgb(0 0 0 / 6%), 0 6px 6px rgb(0 0 0 / 6%);
+}
+
+.images-text-grid:hover {
+  box-shadow: 0 5px 20px rgb(0 0 0 / 20%), 0 6px 6px rgb(0 0 0 / 20%);
+  transition: all 0.5s;
 }
 
 .images-text-grid .overlay-text {
@@ -324,12 +331,12 @@ p {
 
 .images-text-grid img {
   transform: scale(1);
-  transition: 0.5s all ease-in-out;
+  transition: 0.5s all;
 }
 
 .images-text-grid:hover img {
-  transform: scale(1.1);
-  transition: 0.5s all ease-in-out;
+  transform: scale(1.2);
+  transition: 0.5s all;
 }
 
 .industry-connect-section {
@@ -439,6 +446,17 @@ p {
   display: block;
 }
 
+#footer-section,
+#copyright-section {
+  background-color: #3a3c39;
+  color: #ffffff;
+  border: none !important;
+}
+
+#copyright-section {
+  color: #fefefe;
+}
+
 #footer-section p {
   font-size: 16px;
 }
@@ -450,7 +468,7 @@ p {
 }
 
 .footer-links > li > a {
-  color: #37133d;
+  color: #fefefe;
   font-size: 16px;
   text-decoration: none;
   display: block;
@@ -458,18 +476,35 @@ p {
 }
 
 .footer-links > li > a:hover {
-  color: #2c308a;
+  color: #0078ae;
 }
 
 .copy-right-container {
-  border-top: 1px solid #ebeef3;
-  font-size: 14px;
+  border-top: 1px solid #717171;
+  font-size: 12px;
 }
 
 .about-us-banner {
   background-image: url("../images/about-us/about-us-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.about-us-section-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.about-us-image-container img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 470px;
+}
+
+.about-us-section-container.right .about-us-image-container img {
+  height: 680px;
 }
 
 .grid-banner {
@@ -492,32 +527,33 @@ p {
   overflow: hidden;
   background-color: transparent;
   transition: all 0.3s ease-out;
+  border-radius: 10px;
 }
 
 .course-container:hover h3 {
   color: #0a58ca;
-  transition: color 0.3s ease-out;
+  transition: color 0.3s;
 }
 .course-container:hover {
   border: 1px solid #0a58ca;
-  transition: all 0.3s ease-out;
+  transition: all 0.3s;
  }
 
 .course-container img {
   width: 100%;
   transform: scale(1);
-  transition: all 0.5s ease-out;
+  transition: all 0.5s;
 }
 
 .course-img {
   overflow: hidden;
   padding: 0;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s;
 }
 
 .course-container:hover img {
-  transform: scale(1.1);
-  transition: all 0.5s ease-out;
+  transform: scale(1.2);
+  transition: all 0.5s;
 }
 
 .course-card {
@@ -831,6 +867,33 @@ input[type=number] {
   font-size: 24px;
 }
 
+@media screen and (min-width: 1024px) {
+  .about-us-section-container {
+    flex-direction: row;
+  }
+  .about-us-text-container {
+    width: 42%;
+    position: relative;
+  }
+  
+  .inside-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: calc(100% + 100px);
+  }
+  
+  .about-us-image-container {
+    width: 58%;
+  }
+
+  .about-us-section-container.right .inside-container {
+    left: auto;
+    right: 0;
+  }
+}
+
 @media screen and (min-width: 1620px) {
   .full-width-left-bg-container {
     max-width: 1620px;
@@ -841,6 +904,12 @@ input[type=number] {
 @media screen and (min-width: 576px) and (max-width: 1199px) {
   .container {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .about-us-section-container.left {
+    flex-direction: column-reverse;
   }
 }
 
@@ -870,6 +939,13 @@ input[type=number] {
   .nav-container .nav-item > a {
     display: inline-block;
   }
+  /* .about-us-text-container {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+    width: auto;
+  } */
 }
 
 @media screen and (max-width: 767px) {
