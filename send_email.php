@@ -9,7 +9,7 @@
    $comments = $_REQUEST["comments"];
 
    print($fName);
-   $to = "bellamkondamanojb@gmail.com";
+   $to = "info@pbs-edu.fr";
    $subject = "Contact details of $fName";
    
    $message = "<table>";
@@ -27,9 +27,9 @@
 
    $message .= "</table>";
 
-   $headers = "Reply-To: The Sender bellamkondamanojb@gmail.com\r\n"; 
-   $headers .= "Return-Path: The Sender bellamkondamanojb@gmail.com\r\n"; 
-   $headers .= "From: bellamkondamanojb@gmail.com" ."\r\n" .
+   $headers = "Reply-To: The Sender info@pbs-edu.fr\r\n"; 
+   $headers .= "Return-Path: The Sender info@pbs-edu.fr\r\n"; 
+   $headers .= "From: info@pbs-edu.fr" ."\r\n" .
    $headers .= "Organization: PBS\r\n";
    $headers .= "MIME-Version: 1.0\r\n";
    $headers .= "Content-type: text/html; charset=utf-8\r\n";
